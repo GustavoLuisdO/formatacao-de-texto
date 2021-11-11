@@ -173,7 +173,7 @@ function normal(){
   
   texto.style.fontWeight = 'normal'
   texto.style.fontStyle = 'normal'
-  
+  texto.style.textDecoration = 'none'
 }
 
 // NEGRITO
