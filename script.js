@@ -20,6 +20,15 @@ function capitalizar(){
     texto.style.textTransform = 'capitalize'
 }
 
+// COR DO TEXTO
+function cor(){
+  let texto = document.getElementById('texto')
+  let corTexto = document.getElementById('cor').value
+
+  //console.log(corTexto)
+  texto.style.color = corTexto
+}
+
 /* --------- ESTILOS DE FONTES --------- */
 // FONTE
 function altFonte(){
@@ -32,7 +41,7 @@ function altFonte(){
     let fonteFantasy = document.getElementById('fonte-fantasy').value
 
     // SANS SERIF
-    console.log(fonteSansSerif)
+    //console.log(fonteSansSerif)
 
     // LOGICA PARA APLICAR A FONTE ESCOLHIDA
     switch(fonteSansSerif)
@@ -53,7 +62,7 @@ function altFonte(){
     }
 
     // MONOSPACE
-    console.log(fonteMonospace)
+    //console.log(fonteMonospace)
 
     // LOGICA PARA APLICAR A FONTE ESCOLHIDA
     switch(fonteMonospace)
@@ -74,7 +83,7 @@ function altFonte(){
     }
 
     // CURSIVE
-    console.log(fonteCursive)
+    //console.log(fonteCursive)
 
     // LOGICA PARA APLICAR A FONTE ESCOLHIDA
     switch(fonteCursive)
@@ -95,7 +104,7 @@ function altFonte(){
     }
 
     // FANTASY
-    console.log(fonteFantasy)
+    //console.log(fonteFantasy)
 
     // LOGICA PARA APLICAR A FONTE ESCOLHIDA
     switch(fonteFantasy)
@@ -160,6 +169,7 @@ function normal(){
   texto.style.fontWeight = 'normal'
   texto.style.fontStyle = 'normal'
   texto.style.textDecoration = 'none'
+  
 }
 
 // NEGRITO
