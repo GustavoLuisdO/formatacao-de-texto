@@ -19,14 +19,6 @@ function capitalizar(){
   
     texto.style.textTransform = 'capitalize'
 }
-  
-// JUSTIFY
-function justificado(){
-    let texto = document.getElementById('texto')
-  
-    texto.style.textAlign = 'justify'
-    texto.style.textJustify = 'inter-word'
-}
 
 /* --------- ESTILOS DE FONTES --------- */
 // FONTE
@@ -164,6 +156,14 @@ function direita(){
   let texto = document.getElementById('texto')
 
   texto.style.textAlign = 'right'
+}
+
+// JUSTIFY
+function justificado(){
+    let texto = document.getElementById('texto')
+  
+    texto.style.textAlign = 'justify'
+    texto.style.textJustify = 'inter-word'
 }
 
 /* --------- ESTILOS DE TEXTO --------- */
