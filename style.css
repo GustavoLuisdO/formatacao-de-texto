@@ -23,7 +23,7 @@ body{
     border-radius: 15px;
 }
 
-#selecao-fontes .form-control{
+#cor-texto .form-control, #selecao-fontes .form-control{
     width: 200px;
     margin: 10px auto;
     border-radius: 15px;
