@@ -33,11 +33,6 @@ function altFonte(){
 
     // SANS SERIF
     console.log(fonteSansSerif)
-    
-    // LIMPAR OUTRAS CAIXAS DE SELEÇÃO
-    document.getElementById('fonte-monospace').value = ""
-    document.getElementById('fonte-cursive').value = ""
-    document.getElementById('fonte-fantasy').value = ""
 
     // LOGICA PARA APLICAR A FONTE ESCOLHIDA
     switch(fonteSansSerif)
@@ -60,11 +55,6 @@ function altFonte(){
     // MONOSPACE
     console.log(fonteMonospace)
 
-    // LIMPAR OUTRAS CAIXAS DE SELEÇÃO
-    document.getElementById('fonte-sansSerif').value = ""
-    document.getElementById('fonte-cursive').value = ""
-    document.getElementById('fonte-fantasy').value = ""
-
     // LOGICA PARA APLICAR A FONTE ESCOLHIDA
     switch(fonteMonospace)
     {
@@ -85,11 +75,6 @@ function altFonte(){
 
     // CURSIVE
     console.log(fonteCursive)
-    
-    // LIMPAR OUTRAS CAIXAS DE SELEÇÃO
-    document.getElementById('fonte-monospace').value = ""
-    document.getElementById('fonte-sansSerif').value = ""
-    document.getElementById('fonte-fantasy').value = ""
 
     // LOGICA PARA APLICAR A FONTE ESCOLHIDA
     switch(fonteCursive)
@@ -111,11 +96,6 @@ function altFonte(){
 
     // FANTASY
     console.log(fonteFantasy)
-    
-    // LIMPAR OUTRAS CAIXAS DE SELEÇÃO
-    document.getElementById('fonte-monospace').value = ""
-    document.getElementById('fonte-sansSerif').value = ""
-    document.getElementById('fonte-cursive').value = ""
 
     // LOGICA PARA APLICAR A FONTE ESCOLHIDA
     switch(fonteFantasy)
@@ -134,6 +114,12 @@ function altFonte(){
         
         default: document.getElementById('fonte-fantasy').value = ""
     }
+
+    // LIMPAR CAIXAS DE SELEÇÃO
+    document.getElementById('fonte-sansSerif').value = ""
+    document.getElementById('fonte-monospace').value = ""
+    document.getElementById('fonte-cursive').value = ""
+    document.getElementById('fonte-fantasy').value = ""
 }
 
 /* --------- ALINHAMENTO DE TEXTO --------- */
