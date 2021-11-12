@@ -12,6 +12,7 @@ body{
     border-radius: 40px 30px;
     box-shadow: 2px 2px 15px #000;
 }
+
 .form-control{
   border-color: #000;
   border-radius: 10px;
@@ -23,8 +24,17 @@ body{
     border-radius: 15px;
 }
 
-#cor-texto .form-control, #selecao-fontes .form-control{
+#edita-texto .form-control, #selecao-fontes .form-control{
     width: 200px;
     margin: 10px auto;
     border-radius: 15px;
+}
+
+.tamanho-fonte{
+    width: 35%;
+    display: inline-flex;
+    margin: 0 auto;
+    line-height: 42px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
