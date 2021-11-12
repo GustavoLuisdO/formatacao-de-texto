@@ -1,38 +1,72 @@
+var texto = document.getElementById('texto')
+
 /* --------- FORMATAÇÕES DE TEXTO --------- */
 // UPPERCASE
 function caixaAlta(){
-    let texto = document.getElementById('texto')
   
     texto.style.textTransform = 'uppercase'
 }
   
 // LOWERCASE
 function caixaBaixa(){
-    let texto = document.getElementById('texto')
-  
     texto.style.textTransform = 'lowercase'
 }
   
 // CAPITALIZE
 function capitalizar(){
-    let texto = document.getElementById('texto')
-  
     texto.style.textTransform = 'capitalize'
 }
 
 // COR DO TEXTO
 function cor(){
-  let texto = document.getElementById('texto')
   let corTexto = document.getElementById('cor').value
 
   //console.log(corTexto)
   texto.style.color = corTexto
 }
 
+// FONTE UP
+function fonteUp(){
+    let texto = document.getElementById('texto').style.fontSize
+    let tamanhoFonte = document.getElementById('tamanho-fonte')
+
+    texto = texto.replace('px', '')
+
+    if(texto == ""){
+        document.getElementById('texto').style.fontSize = '16px'
+    }
+    else{
+        document.getElementById('texto').style.fontSize = (parseInt(texto)+1)+'px'
+    }
+
+    tamanhoFonte.innerHTML = texto
+
+    //console.log(texto+'px')
+}
+
+
+// FONTE DOWN
+function fonteDown(){
+    let texto = document.getElementById('texto').style.fontSize
+    let tamanhoFonte = document.getElementById('tamanho-fonte')
+
+    texto = texto.replace('px', '')
+
+    if(texto == ""){
+        document.getElementById('texto').style.fontSize = '16px'
+    }
+    else{
+        document.getElementById('texto').style.fontSize = (parseInt(texto)-1)+'px'
+    }
+
+    tamanhoFonte.innerHTML = texto
+
+    //console.log(texto+'px')
+}
+
 /* --------- ESTILOS DE FONTES --------- */
 // FONTE
 function altFonte(){
-    let texto = document.getElementById('texto')
 
     // ESTILOS DE FONTES
     let fonteSansSerif = document.getElementById('fonte-sansSerif').value
@@ -134,29 +168,21 @@ function altFonte(){
 /* --------- ALINHAMENTO DE TEXTO --------- */
 // ALINHAR TEXTO A ESQUERDA
 function esquerda(){
-  let texto = document.getElementById('texto')
-
   texto.style.textAlign = 'left'
 }
 
 // ALINHAR TEXTO NO CENTRO
 function centro(){
-  let texto = document.getElementById('texto')
-
   texto.style.textAlign = 'center'
 }
 
 // ALINHAR TEXTO A DIREITA
 function direita(){
-  let texto = document.getElementById('texto')
-
   texto.style.textAlign = 'right'
 }
 
 // JUSTIFY
 function justificado(){
-    let texto = document.getElementById('texto')
-  
     texto.style.textAlign = 'justify'
     texto.style.textJustify = 'inter-word'
 }
@@ -164,8 +190,6 @@ function justificado(){
 /* --------- ESTILOS DE TEXTO --------- */
 // NORMAL
 function normal(){
-  let texto = document.getElementById('texto')
-  
   texto.style.fontWeight = 'normal'
   texto.style.fontStyle = 'normal'
   texto.style.textDecoration = 'none'
@@ -174,21 +198,15 @@ function normal(){
 
 // NEGRITO
 function negrito(){
-  let texto = document.getElementById('texto')
-
   texto.style.fontWeight = 'bold'
 }
 
 // ITALICO
 function italico(){
-  let texto = document.getElementById('texto')
-
   texto.style.fontStyle = 'italic'
 }
 
 // SUBLINHADO
 function sublinhado(){
-  let texto = document.getElementById('texto')
-
   texto.style.textDecoration = 'underline'
 }
