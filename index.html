@@ -15,93 +15,84 @@
   <body>
     <div class="container">
 
-      <div id="caixa">
-
-        <div class="row m-3">
-          <h2 class="display-4">Formate seu texto</h2>
-        </div>
-
-        <textarea class="form-control" id="texto" name="texto" rows="7"></textarea>
-
-        <div id="btn" class="row">
-
-          <button class="btn btn-outline-dark" onclick="caixaAlta()">MAIÚSCULAS</button>
-          <button class="btn btn-outline-dark" onclick="caixaBaixa()">MINÚSCULAS</button>
-          <button class="btn btn-outline-dark" onclick="capitalizar()">CAPITALIZAR</button>
-
-        </div><hr>
-
-        <div id="edita-texto" class="row">
-
-          <input type="color" id="cor" class="form-control">
-
-          <button class="btn btn-outline-dark" onclick="cor()">APLICAR COR</button>
-
-          <div class="tamanho-fonte">
-            <button class="btn btn-outline-dark" onclick="fonteUp()"><i class="fas fa-caret-up fas-2x"></i></button>
-            <p id="tamanho-fonte">16</p>
-            <button class="btn btn-outline-dark" onclick="fonteDown()"><i class="fas fa-caret-down fas-2x"></i></button>
+      <main>
+        
+        <header>
+            <div class="formatacao-texto row">
+              <div class="col-6">
+                <button class="btn btn-outline-dark" onclick="caixaAlta()"><i class="fas fa-font"></i><i class="fas fa-long-arrow-alt-up"></i></button>
+        
+                <button class="btn btn-outline-dark" onclick="caixaBaixa()"><i class="fas fa-font"></i><i class="fas fa-long-arrow-alt-down"></i></button>
+                <button class="btn btn-outline-dark" onclick="capitalizar()">CAPITALIZAR</button>
+              </div>
+              <div class="col-6">
+                <div id="cor-fonte">
+                  <input type="color" id="cor" class="form-control">
+                  <button class="btn btn-outline-dark" onclick="cor()">APLICAR COR</button>
+                </div>
+                <div class="tamanho-fonte">
+                  <button class="btn btn-outline-dark" onclick="fonteUp()"><i class="fas fa-sort-alpha-up"></i></button>
+                  <p id="tamanho-fonte">16</p>
+                  <button class="btn btn-outline-dark" onclick="fonteDown()"><i class="fas fa-sort-alpha-down-alt"></i></button>
+                </div>
+              </div>
+            </div>
+            <div id="selecao-fontes" class="row"> <!-- https://www.w3.org/Style/Examples/007/fonts.pt_BR.html -->
+                <select class="form-control" name="fonte-sansSerif" id="fonte-sansSerif">
+                    <option value="">fontes sans serif</option>
+                    <option value="1">Arial, sans-serif</option>
+                    <option value="2">Helvetica, sans-serif</option>
+                    <option value="3">Verdana, sans-serif</option>
+                    <option value="4">Trebuchet MS, sans-serif</option>
+                </select>
+                <select class="form-control" name="fonte-monospace" id="fonte-monospace">
+                    <option value="">fontes monospace</option>
+                    <option value="1">Andale Mono, monospace</option>
+                    <option value="2">Courier New, monospace</option>
+                    <option value="3">Courier, monospace</option>
+                    <option value="4">FreeMono, monospace</option>
+                </select>
+                <select class="form-control" name="fonte-cursive" id="fonte-cursive">
+                    <option value="">fontes cursive</option>
+                    <option value="1">Comic Sans MS, Comic Sans, cursive</option>
+                    <option value="2">Apple Chancery, cursive</option>
+                    <option value="3">Bradley Hand, cursive</option>
+                    <option value="4">Brush Script MT, Brush Script Std, cursive</option>
+                </select>
+                <select class="form-control" name="fonte-fantasy" id="fonte-fantasy">
+                    <option value="">fontes fantasy</option>
+                    <option value="1">Impact, fantasy</option>
+                    <option value="2">Luminari, fantasy</option>
+                    <option value="3">Chalkduster, fantasy</option>
+                    <option value="4">Jazz LET, fantasy</option>
+                </select>
+                <button class="btn btn-outline-dark" onclick="altFonte()">APLICAR FONTE</button>
+            </div>
+            <div class="formatacao-texto row">
+              <div class="col-6">
+                <button class="btn btn-outline-dark" onclick="esquerda()"><i class="fas fa-align-left fas-3x"></i></button>
+                <button class="btn btn-outline-dark" onclick="centro()"><i class="fas fa-align-center fas-3x"></i></button>
+                <button class="btn btn-outline-dark" onclick="direita()"><i class="fas fa-align-right fas-3x"></i></button>
+                <button class="btn btn-outline-dark" onclick="justificado()"><i class="fas fa-align-justify fas-3x"></i></button>
+              </div>
+        
+              <div class="col-6">
+                <button class="btn btn-outline-dark" onclick="normal()"><i class="fas fa-remove-format fas-3x"></i></button>
+                <button class="btn btn-outline-dark" onclick="negrito()"><i class="fas fa-bold fas-3x"></i></button>
+                <button class="btn btn-outline-dark" onclick="italico()"><i class="fas fa-italic fas-3x"></i></button>
+                <button class="btn btn-outline-dark" onclick="sublinhado()"><i class="fas fa-underline fas-3x"></i></button>
+              </div>
+        
+            </div>
+        </header>
+        <div id="caixa">
+          <div class="row m-3">
+            <h2 class="display-4">Formate seu texto</h2>
           </div>
-          
-
-        </div><hr>
-
-        <div id="selecao-fontes" class="row"> <!-- https://www.w3.org/Style/Examples/007/fonts.pt_BR.html -->
-            <select class="form-control" name="fonte-sansSerif" id="fonte-sansSerif">
-                <option value="">fontes sans serif</option>
-                <option value="1">Arial, sans-serif</option>
-                <option value="2">Helvetica, sans-serif</option>
-                <option value="3">Verdana, sans-serif</option>
-                <option value="4">Trebuchet MS, sans-serif</option>
-            </select>
-
-            <select class="form-control" name="fonte-monospace" id="fonte-monospace">
-                <option value="">fontes monospace</option>
-                <option value="1">Andale Mono, monospace</option>
-                <option value="2">Courier New, monospace</option>
-                <option value="3">Courier, monospace</option>
-                <option value="4">FreeMono, monospace</option>
-            </select>
-
-            <select class="form-control" name="fonte-cursive" id="fonte-cursive">
-                <option value="">fontes cursive</option>
-                <option value="1">Comic Sans MS, Comic Sans, cursive</option>
-                <option value="2">Apple Chancery, cursive</option>
-                <option value="3">Bradley Hand, cursive</option>
-                <option value="4">Brush Script MT, Brush Script Std, cursive</option>
-            </select>
-
-            <select class="form-control" name="fonte-fantasy" id="fonte-fantasy">
-                <option value="">fontes fantasy</option>
-                <option value="1">Impact, fantasy</option>
-                <option value="2">Luminari, fantasy</option>
-                <option value="3">Chalkduster, fantasy</option>
-                <option value="4">Jazz LET, fantasy</option>
-            </select>
-
-            <button class="btn btn-outline-dark" onclick="altFonte()">APLICAR FONTE</button>
-        </div><hr>
-
-        <div id="alinhamento-texto" class="row">
-
-          <button class="btn btn-outline-dark" onclick="esquerda()">ALINHAR A ESQUERDA</button>
-          <button class="btn btn-outline-dark" onclick="centro()">ALINHAR NO CENTRO</button>
-          <button class="btn btn-outline-dark" onclick="direita()">ALINHAR A DIREITA</button>
-          <button class="btn btn-outline-dark" onclick="justificado()">JUSTIFICADO</button>
-          
-        </div><hr>
-
-        <div id="estilo-texto" class="row">
-
-          <button class="btn btn-outline-dark" onclick="normal()">NORMAL</button>
-          <button class="btn btn-outline-dark" onclick="negrito()">NEGRITO</button>
-          <button class="btn btn-outline-dark" onclick="italico()">ITALICO</button>
-          <button class="btn btn-outline-dark" onclick="sublinhado()">SUBLINHADO</button>
-          
+          <textarea class="form-control" id="texto" name="texto" rows="7"></textarea>
         </div>
 
-      </div>
-
+      </main>
 
     </div>
 
